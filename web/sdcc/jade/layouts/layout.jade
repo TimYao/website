@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    meta( name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
+    meta( http-equiv="content-type" content="text/html; charset=utf-8")
+    meta( http-equiv="X-UA-Compatible" content="IE=Edge")
+    link( rel="stylesheet" href="http://c.csdnimg.cn/cdn/201502/css/bootstrap.min.css")
+    link( rel="stylesheet" href="http://c.csdnimg.cn/cdn/201502/css/font-awesome.min.css")
+    link( rel="stylesheet" type="text/css" href="http://static.csdn.net/public/common/toolbar/css/index.css")
+    link( rel="stylesheet" href="static/css/common.css" type="text/css")
+    script( src="http://c.csdnimg.cn/cdn/201502/js/jquery-2.1.3.min.js")
+    script( src="http://c.csdnimg.cn/cdn/201502/js/bootstrap.min.js")
+    block css
+  body
+    //script(id="toolbar-tpl-scriptId" skin="black"  fixed="true" prod="my" src="http://static.csdn.net/public/common/toolbar/js/html.js" type="text/javascript")
+    block through
+    block content
+      .SDCCMod
+        //左边 开始
+        .SDCCMod_l
+          block left
+        //左边 结束
+
+        //右边 开始
+        .SDCCModr_r
+          block right
+        //右边 结束
+
+
+    script(type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js")
+    //-script(id="noticeScript" type="text/javascript" btnid="header_notice_num" wrapid="note1" count="5" subcount="5" src="http://csdnimg.cn/rabbit/notev2/js/notify.js?9d86d94")
+    //script(type="text/javascript" src="http://static.csdn.net/public/common/toolbar/js/toolbar.js")
+    style.
+      .pub_footer_new{width: 100%; padding:0 15px}
+      @media (min-width:1140px){
+        .pub_footer_new{width: 1140px;padding:0}
+      }
+      .pub_fo{margin-top: 0;border-top: none;}
+      .csdn-toolbar-skin-black,.csdn-toolbar{display:none;}
+      @media (min-width:640px){
+        .csdn-toolbar .container{width:95%; padding:0 15px;}
+        .csdn-toolbar-skin-black,.csdn-toolbar{display:block;}
+      }
+      @media (min-width:1140px){
+        .csdn-toolbar .container{width:1140px; padding:0;}
+      }
+    block script
+
+
+        

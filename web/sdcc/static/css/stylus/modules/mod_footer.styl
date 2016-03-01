@@ -1,0 +1,40 @@
+$mod_footer()
+    /* 底部 开始 */
+    .foot_banner
+        color #ffffff
+        position relative
+        background-size cover
+        .hezuo
+            overflow hidden
+            li
+                float left
+                text-align left
+                b
+                    font-weight bold
+    @media(max-width: 767px)
+        .foot_banner
+            margin-bottom 45px
+            padding 22px 0 45px
+            background url("../images/footer02.png") repeat bottom
+            .hezuo
+                li
+                    width 50%
+                    font-size 16px
+                    line-height 40px
+                    margin 14px 0
+        .logo
+            display none
+    @media(min-width: 768px)
+        .foot_banner
+            background url("../images/footer.png") repeat bottom
+            padding 45px 0
+            height 160px
+            .hezuo
+                li
+                    width 25%
+                    font-size 14px
+                    line-height 22px
+                    b
+                        font-size 16px
+                        line-height 26px
+    /* 底部 结束 */

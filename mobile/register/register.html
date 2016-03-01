@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="stylesheet" href="register.css" type="text/css" media="all">
+	<script type="text/javascript" src="zepto.min.js"></script>
+</head>
+<body>
+<header class="head">
+	<a href="" class="jt"></a>
+	<h1>注册</h1>
+</header>
+<section>
+  <div class="wrap">
+  	<form method="post" action="http://www.baidu.com">
+  		<p class="ptext">输入手机号码</p>
+	  	<label class="outText">
+	  		<span class="phonetext"><input type="text" placeholder="请输入手机号" class="optext" validationrules=['notNull','phoneTel',['手机号码不能为空','请输入正确手机号']] ></span>
+	  		<b class="bgb">&times</b>
+	  	</label>
+	  	<p class="error infortext"></p>
+	  	<label><input type="submit" class="subBtn backgray" value="下一步"></label>
+  	</form>
+  </div>
+  <div class="wrap">
+  	<form method="post" action="http://www.baidu.com">
+  		<p class="ptext bold">验证码已发送到<em>13710777777</em></p>
+	  	<label class="outText1">
+	  		<span class="phonetext fl"><input type="text" placeholder="请输入验证码" class="optext" validationrules=['notNull',['验证码不能为空']]><b class="bgb">&times</b></span>
+	  		<a href="" class="backgray yztext fr">（59）重新发送</a>
+	  	</label>
+	  	<p class="error infortext"></p>
+	  	<label><input type="submit" class="subBtn backgray" value="下一步" ></label>
+  	</form>
+  </div>
+  <div class="wrap lastwrap">
+  	<form method="post" action="http://www.baidu.com">
+  		<p class="ptext bold">输入用户名和密码</p>
+	  	<label class="outText">
+	  		<span class="phonetext"><input type="text" placeholder="输入用户名" class="optext user" validationrules=['notNull','userReg',['该内容不能为空','2-20个字符，支持小写英文、数字和“_”格式，请以英文字母开头']]></span>
+	  		<b class="bgb">&times</b>
+	  	</label>
+	  	<p class="error infortext"></p>
+	  	<div class="marginblank"></div>
+	  	<label class="outText">
+	  		<span class="phonetext"><input type="password" placeholder="输入密码" class="optext pwd" validationrules=['notNull','pwd',['该内容不能为空','6-20个字符，只能包含大小写、数字及标点（空格除外）']]></span>
+	  		<b class="bgb">&times</b>
+	  	</label>
+	  	<p class="error infortext"></p>
+	  	<p class="ptext1">6-12个字符，只能包含大小写、数字及标点
+	（空格除外）密码太短（6-12个字符）</p>
+	  	<label><input type="submit" class="subBtn backgray" value="下一步" ></label>
+  	</form>
+  </div>	
+  <div class="wrap">
+  	  <p class="psuccess">
+  	  	 <img src="images/success.png" alt=""/><br/>
+  	  	 欢迎你加入CSDN
+  	  </p>
+  </div>	
+</section>
+<script>
+$(function(){
+  var userText = '用户已经存在！';
+  var userflg = false;
+  var pwdflg = false;
+  var usertag = false;
+  $(".optext").on('keyup',function(event){
+     var value = $.trim($(this).val());
+     var wrap = $(this).parents('.wrap');
+     $(this).val(value);
+     var rules = $(this).attr("validationrules") || [];
+     if(value!="")
+     {
+        $(this).parents('label').find('.bgb').show();
+        if($(this).parents('label').hasClass('outText1'))
+        {
+           $(this).parents('label').find(".yztext").removeClass("backgray").addClass("backred");
+           $(this).parents('.wrap').find(".subBtn").removeClass("backgray").addClass("backred");
+        }
+        $(this).parents('label').next('.infortext').html('');
+        tabClick($(this).parents('label').find('.bgb'));
+        if(wrap.hasClass('lastwrap'))
+        {
+            if(userflg)
+            { 
+              $(".user").parents('label').next(".infortext").html(userText);
+            }
+        }  
+     }else{
+     	  $(this).parents('label').find('.bgb').hide();
+     }
+     validationrules($(this),rules);
+     event.stopPropagation();
+     return false;  
+  });
+  
+  //tabClick 触发删除text里值
+  function tabClick(obj)
+  {
+     obj.on('click',function(event){
+       	if($(this).parents('label').hasClass('outText1')){
+       		$(this).parents('label').find(".yztext").removeClass("backred").addClass("backgray"); 
+       	}
+       	$(this).parents('label').find(".optext").val(""); 
+       	$(this).hide();
+       	$(this).parents('label').next(".infortext").html('');
+        $(this).parents('.wrap').find(".subBtn").removeClass("backred").addClass("backgray"); 
+        $(this).parents('.wrap').find(".subBtn").off('click');
+        $(this).parents('.wrap').find(".subBtn").on('click',notsub)
+        if($(this).parents('.wrap').hasClass('lastwrap'))
+        {
+           if($(this).parents('label').find('.optext').hasClass("user"))
+           {
+              usertag = false;
+              userflg = false;
+           }
+           if($(this).parents('label').find('.optext').hasClass('pwd'))
+           { 
+              //console.log(1);
+              pwdflg = false;
+           }
+        }
+        event.stopPropagation();
+        return false;
+     });
+  }
+  //验证规则
+  function validationrules(obj,rules)
+  {
+  	 rules = eval(rules);
+  	 var wrap = $(obj).parents('.wrap');
+     if(rules&&rules.length<=0)
+     {
+        return false;
+     }
+     
+     var rulesLength = rules.length || 0;
+     if(rulesLength<=0)
+     {
+        return false;
+     }
+     if(rules[rulesLength-1]&&rules[rulesLength-1].length<=0)
+     {
+        var text = [];
+     }else{
+     	var text = eval(rules[rulesLength-1]);
+     }
+     rulesLength = rulesLength-1;
+     for(var i=0;i<rulesLength;i++)
+     {
+       	if(rules[i].toLowerCase()==="notnull") //验证是否为空
+       	{ 
+             var value = $.trim($(obj).val());
+             if(value==="")
+             {
+             	  var infortext = text[i] || text[0];
+                if($(obj).parents('.wrap').hasClass('lastwrap'))
+                {
+                   usertag = false;
+                   pwdflg = false;
+                }
+             	  break;
+             }
+       	}else if(rules[i].toLowerCase()==="phonetel") //验证手机号码
+       	{
+             var value = $.trim($(obj).val());
+             var phonereg = /^1(3|4|5|7|8)\d{9}$/g;
+             if(!phonereg.test(value))
+             {  
+                var infortext = text[i] || text[0];
+                break;
+             }else{
+             	  var infortext =''; 
+             }
+       	}else if(rules[i].toLowerCase()==="userreg") //验证用户规则
+        {
+       	   var value = $.trim($(obj).val());	
+       	   var userReg = /^[a-zA-Z]\w{1,19}$/g; //正则
+       	   if(!userReg.test(value))
+       	   { 
+                if($(obj).parents('.wrap').hasClass('lastwrap'))
+                {
+                   usertag = false;
+                }
+                var infortext = text[i] || text[0];
+                break;
+       	   }else{
+       	   	  var infortext ='';
+              if($(obj).hasClass('user'))
+              {
+                  var This = $(obj);
+                  $(obj).parents('label').find('.bgb').show();
+                  tabClick($(obj).parents('label').find('.bgb'));
+                  $.ajax({
+                      url:'test.php',
+                      async:true,
+                      data:{
+                        text:value
+                      },
+                      dataType:'get',
+                      success:function(reponse){
+                         var status = eval("("+reponse+")").status;
+                         if(Number(status,10)===1)
+                         {
+                            userflg = true;
+                            usertag = false;
+                            This.parents('label').next(".infortext").html(userText);
+                         }else{
+                            userflg = false;
+                            usertag = true;
+                         }
+                         subFun(wrap);
+                      },
+                      error:function(){
+                        alert("服务器请求失败！");
+                      }
+                  });
+              } 
+       	   }	
+       	}else if(rules[i].toLowerCase()==="pwd") //验证密码
+        {
+             var value = $.trim($(obj).val());
+             var pwdreg = /^([\w`~!#%\$\^&-\+=\{\}\\\|:;,<>\/"'\*@,\?\.\[\]\(\)]){6,20}$/g;  //正则  
+             if(!pwdreg.test(value))
+       	     {
+                var infortext = text[i] || text[0]; 
+                if($(obj).parents('.wrap').hasClass('lastwrap'))
+                {
+                    pwdflg = false;
+                }
+                break;
+       	     }else{
+       	   	    var infortext =''; 
+       	     }
+             pwdflg = true;
+       	}else{
+            var infortext = '';
+        }     
+     }
+     var infort = $(obj).parents('label').next(".infortext");
+     if(infortext&&infortext.length<=0)
+     { 
+        return false;
+     }
+     if($(obj).parents('.wrap').hasClass('lastwrap'))
+     {
+         if(userflg)
+         { 
+            $(".user").parents('label').next(".infortext").html(userText);
+         }
+     }
+     infort.html(infortext);
+     subFun(wrap);
+  }
+
+  //subFun提交函数
+  function subFun(wrap)
+  {
+  	 var infort = wrap.find(".infortext"); 
+  	 var subBtn = wrap.find(".subBtn");
+  	 var flg = true;
+  	 for(var i=0;i<$(infort).size();i++)
+  	 {
+        if($(infort).eq(i).html()!="")
+        {
+            flg = false;
+            break;
+        }else{
+        	flg = true;
+        }
+  	 }
+     //console.log("usertag:"+usertag);
+     //console.log("pwdflg:"+pwdflg);
+     //没有通过user和pwd验证
+     if(wrap.hasClass('lastwrap'))
+     {
+        if(!pwdflg || !usertag)
+        {
+            flg = false;
+        }
+     }
+     //是否提交验证
+  	 if(flg)
+  	 {
+       subBtn.removeClass("backgray").addClass("backred");
+       subBtn.on('click',function(){
+            submitFun($(this));
+       });
+  	 }else{
+       subBtn.removeClass("backred").addClass("backgray");
+       subBtn.off('click');
+       subBtn.on('click',notsub);
+       if($(".yztext") && $(".yztext").length>0)
+       {
+           $(".yztext").removeClass("backred").addClass("backgray");
+       }
+  	 }
+  }
+  //默认不提交
+  $(".subBtn").on('click',notsub);
+  function notsub()
+  {
+    event.stopPropagation();
+    event.preventDefault();
+    return false;
+  }
+  function submitFun(obj)
+  {
+     obj.parents('form').submit();
+  }
+});	
+</script>	
+
+</body>
+</html>

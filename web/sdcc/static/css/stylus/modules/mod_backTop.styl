@@ -1,0 +1,31 @@
+$mod_backTop()
+    /* 返回顶部 开始 */
+    .back_top
+        border 1px solid #ffffff
+        background-color #35aa8f
+        position fixed
+        z-index 900
+        right 10px
+        a
+            display block
+            width 38px
+            height 38px
+            img
+                width 100%
+
+    @media (max-width: 320px)
+        .back_top
+            bottom 85px
+    @media (min-width: 321px) and (max-width: 850px)
+        .back_top
+            bottom 93px
+    @media (min-width: 851px)
+        .back_top
+            bottom 5px
+    @media (min-width: 837px) and (max-width:1139px)
+      .back_top
+        right 0px
+    @media (min-width: 1140px)
+        .back_top
+          right 20px
+    /* 返回顶部 结束 */

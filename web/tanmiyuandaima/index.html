@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>探秘源代码</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/bm_bg.js"></script>
+    <!--<script src="js/markdown.js"></script>-->
+    <script>
+        //console.log(markdown)
+//        window.onload=function(){
+//            document.querySelector("#toHtml").innerHTML=markdown.toHTML( "Hello *World*!" )
+//        }
+    </script>
+</head>
+<body>
+<script type="text/javascript">
+	$(function(){
+		$('#dowebok').fullpage({
+			sectionsColor: ['#060c23', '#040714','#1d1d1e','#26282c','#26282c'],
+			'navigation': true,
+			'navigationPosition':'left',
+			'loopHorizontal':false
+
+		});
+	});
+    $(window).resize(function() {
+        initWin();
+    });
+    var docWidth,docHeight;
+    function initWin(w,h){
+         (w) ? docWidth = w : docWidth = $(window).width();
+         (h) ? docHeight = h : docHeight = $(window).height();
+         $("#Bluemix_canvas").attr('width',docWidth);
+         $("#Bluemix_canvas").attr('height',docHeight);
+    }
+
+    $(function(){
+    	$(".dati").click(function(){
+            $(this).parent().find(".layerB").fadeIn();
+    		$(this).html('0:59').prev().hide();
+//    		$(".layerB").fadeIn();
+    		$(".sec02main ul li").css('margin-top','-10%');
+            $(".sec02main ul li").find(".line_w").eq(1).hide();
+    	});
+
+    })
+
+
+</script>
+
+    <!-- left-->
+    <div class="sidebar_L">
+        <div class="shareB">
+			<a href="#" class="sha_1"></a>
+			<a href="#" class="sha_2"></a>
+			<a href="#" class="sha_3"></a>
+			<a href="#" class="sha_4"></a>
+        </div>
+    </div>
+    <div id="dowebok"> 
+    	<!-- page1 -->
+		<div class="main section">
+			<div class="logo"><img src="images/logo.png"></div>
+			<canvas id="Bluemix_canvas">浏览器不支持HTML5！</canvas>
+			<div class="arrow_cen"></div>
+			<div class="mobile"><a href="#"><img src="images/mobile.png"></a></div>
+			<div class="iot"><a href="#"><img src="images/iot.png"></a></div>
+			<div class="watson"><a href="#"><img src="images/watson.png"></a></div>
+			<div class="bda"><a href="#"><img src="images/bda.png"></a></div>
+			<div class="title"><img src="images/title_index.png" alt=""></div>
+			<div class="txt1"><img src="images/title.png"></div>
+			<div class="caidaiL"></div>
+			<div class="caidaiR"></div>
+			<div class="bot_tx"><img src="images/bottom_txt.png"></div>
+			<div class="arr_down"><a href="#"><img src="images/arr_down.png"></a></div>
+		</div>
+		<!-- page2 -->
+		<div class="main section">
+			<div class="logo"><img src="images/logo.png"></div>
+			<div class="sec02main">
+				<div class="lines" id="lines">
+					<span class="span0 down0 op01"></span>
+					<span class="span1 down1 op04"></span>
+					<span class="span2 down2 op01"></span>
+					<span class="span3 down3 op01"></span>
+					<span class="span4 down4 op01"></span>
+					<span class="span5 down5 op04"></span>
+					<span class="span6 down6 op01"></span>
+					<span class="span7 down7 op04"></span>
+					<span class="span8 down8 op06"></span>
+					<span class="span9 down9 op01"></span>
+
+					<span class="span10 down10 op01"></span>
+					<span class="span11 down11 op01"></span>
+					<span class="span12 down12 op04"></span>
+					<span class="span13 down13 op01"></span>
+					<span class="span14 down14 op01"></span>
+
+					<span class="span15 down15 op01"></span>
+					<span class="span16 down16 op01"></span>
+					<span class="span17 down17 op04"></span>
+					<span class="span18 down18 op01"></span>
+					<span class="span19 down19 op01"></span>
+				</div>
+				<ul>
+					<li>
+						<div class="line_g"></div>
+						<img src="images/Coming-Soon1_qa.png">
+					</li>
+					<li>
+						<div class="line_w"></div>
+						<img src="images/watson_qa.png">
+						<div class="sm_line"></div>
+						<a href="javascript:" class="dati" id="btn_wat"><img src="images/play.png"></a>
+						<div class="line_w"></div>
+                        <div class="layerB">
+                            <div class="content">
+                        <pre>
+public1 static String translate(String text,String source,String traget){
+  LanguageTranslation service = new LanguageTranslation();
+  // service.setUsernameAndPassword(“5d933d5e-50b5-4b05-a358-f6b781****”, “VbLm******");
+  service.setUsernameAndPassword(Constants.TTT_USERNAME, Constants.TTT_PASSWORD);
+  TranslationResult translationResult = service.translate(text, source, traget);
+  List &lt;Translation&gt; translationList= translationResult.getTranslations();
+  Translation translation=translationList.get(0);
+  return translation.getTranslation();
+}
+                        </pre>
+                            </div>
+                            <textarea>这段代码实现了什么功能？</textarea>
+                            <a href="javascript:" class="btn_open"><img src="images/btn-open.png"></a>
+                        </div>
+					</li>
+					<li>
+						<div class="line_w"></div>
+						<img src="images/IOT_qa.png">
+						<div class="sm_line"></div>
+						<a href="javascript:" class="dati" id="btn_iot"><img src="images/play.png"></a>
+						<div class="line_w"></div>
+                        <div class="layerB">
+                            <div class="content">
+                        <pre>
+public static String translate(String text,String source,String traget){
+  LanguageTranslation service = new LanguageTranslation();
+  // service.setUsernameAndPassword(“5d933d5e-50b5-4b05-a358-f6b781****”, “VbLm******");
+  service.setUsernameAndPassword(Constants.TTT_USERNAME, Constants.TTT_PASSWORD);
+  TranslationResult translationResult = service.translate(text, source, traget);
+  List &lt;Translation&gt; translationList= translationResult.getTranslations();
+  Translation translation=translationList.get(0);
+  return translation.getTranslation();
+}
+                        </pre>
+                            </div>
+                            <textarea>这段代码实现了什么功能？</textarea>
+                            <a href="javascript:" class="btn_open"><img src="images/btn-open.png"></a>
+                        </div>
+					</li>
+					<li>
+						<div class="line_g"></div>
+						<img src="images/Coming-Soon1_qa.png">
+					</li>
+				</ul>
+
+			</div>
+
+			<div class="jiabinBox">
+				<div class="tx"></div>
+				<div class="xingpos xingtop">
+					<canvas id="xingtop">Your browser does not support the canvas element.</canvas>
+				</div>
+                <a href="javascript:" class="fanhui"><img src="images/fanhui.png" alt=""/></a>
+				<!-- 田文生 1-->
+				<div class="slide">
+					<div class="zjn tws">
+						<div class="zjn_lef">
+							<img src="images/tws_txt01.png">
+							<img src="images/tws_rb.png" class="zj_name">
+						</div>
+						<div class="zjn_rig">
+							<img src="images/tws01.png">
+						</div>
+					</div>
+				</div>
+				<!-- 田文生 2 -->
+				<div class="slide">
+					<div class="zjn2 tws2">
+						<div class="tws2_1"><img src="images/tws_txt02.png"></div>
+						<div class="tws2_2">
+							<p>
+								import cloudant<br>
+								import time<br>
+								import random<br><br>
+
+								ISOTIMEFORMAT='%Y-%m-%d %X'<br>
+								# connect to your account<br>
+								USERNAME = 'iolab'<br>
+								account = cloudant.Account(USERNAME)<br><br>
+
+								# create a database object<br>
+								db = account.database('iot')<br>
+								doc = db.document('')<br><br>
+
+								while 1:<br>
+								# create the document<br>
+								    # temperature = ext_sensor.temperature()<br>
+								    # humidity = ext_sensor.humidity()<br>
+								    datetime = time.strftime( ISOTIMEFORMAT, time.localtime())<br>
+								    # For test<br>
+								    temperature = random.randint(18, 25)<br>
+								    humidity = random.randint(45, 60)<br>
+								    resp = doc.post(params={<br>
+								     'temp':temperature,<br>
+								     'humi':humidity,<br>
+								      'time': datetime<br>
+								      })<br>
+								    # Such exceptions can be handled by notification for review by administrators<br>
+								    if (temperature>30 | temperature<0 ):<br>
+								           #sendemail()<br>
+								           print temperature<br>
+								    time.sleep(300)<br>
+
+								#print response.json()<br><br>
+								# {'ok': True}<br>
+							</p>
+							<a href="#" class="view_mo_t tws-2bt"><img src="images/btn_covideo.png"></a>
+						</div>
+					</div>
+				</div>
+				<!-- 田文生 3 -->
+				<div class="slide">
+					<div class="zjn2 tws2">
+						<div class="tws2_1"><img src="images/tws_txt03.png"></div>
+						<div class="tws2_2 autosro">
+							<div>
+							<pre>
+#define channelnumber 4     // Number of channels
+#define framecount 1      // 
+#define minsync 3000        /
+int inputpin = 48;           // PPM input pin
+int inverted = 0;           
+long serialspeed = 115200;  
+
+long synclength[framecount];              // syncvalues
+int channel[channelnumber*framecount];    // Channel values
+long framelength[framecount];             // frame start times    
+int counter = 0;                          // counter for measuring timings
+int outcounter = 0;                       // counter for output measured timings
+int synced = 0;                           // used boolean after found sync, start get all frames from pattern
+
+int offset_max = 1300;
+int offset_min = 900;
+int pin_out_1 = 12;
+int pin_out_2 = 11;
+int pin_out_3 = 8;
+int pin_out_4 = 7;
+
+
+void forward()
+{
+    digitalWrite(pin_out_1, LOW);  
+   digitalWrite(pin_out_2, HIGH);  
+   digitalWrite(pin_out_3, HIGH);  
+   digitalWrite(pin_out_4, LOW);  
+}
+
+void back()
+{
+  digitalWrite(pin_out_1, HIGH);  
+   digitalWrite(pin_out_2, LOW);  
+   digitalWrite(pin_out_3, LOW);  
+   digitalWrite(pin_out_4, HIGH); 
+  
+}
+
+
+void left()
+{
+  digitalWrite(pin_out_1, HIGH);  
+   digitalWrite(pin_out_2, LOW);  
+   digitalWrite(pin_out_3, HIGH);  
+   digitalWrite(pin_out_4, LOW);  
+}
+
+void right()
+{
+  digitalWrite(pin_out_1, LOW);  
+   digitalWrite(pin_out_2, HIGH);  
+   digitalWrite(pin_out_3, LOW);  
+   digitalWrite(pin_out_4, HIGH);  
+}
+
+void halt()
+{
+   digitalWrite(pin_out_1, LOW);  
+   digitalWrite(pin_out_2, LOW);  
+   digitalWrite(pin_out_3, LOW);  
+   digitalWrite(pin_out_4, LOW);  
+}
+
+
+
+void init()
+{
+  Serial.begin(serialspeed);                       
+  pinMode(inputpin, INPUT);                        
+  synced = 0; 
+  pinMode(pin_out_1, OUTPUT); 
+  pinMode(pin_out_2, OUTPUT); 
+  pinMode(pin_out_3, OUTPUT); 
+  pinMode(pin_out_4, OUTPUT); 
+}
+
+void manualcontrol()
+{
+ 
+ while(1)
+ {
+  synclength[counter] = 0;                                                                         
+  if (synced == 0){                                                                                
+    if ( inverted == 0 ){                                                                          
+      synclength[counter] = pulseIn(inputpin, HIGH);                                               
+    }
+    else{                                                                                          
+      synclength[counter] = pulseIn(inputpin, LOW);                                                
+    }
+  }
+  if ((synclength[counter] > minsync)or(synced == 1)){                                              
+    synced = 1;                                                                                    
+    framelength[counter] = micros();                                                                
+    synclength[counter] = 0;                                                                        
+    if ( inverted == 0 ){                               // if inverted signal selected
+      for (int channelcounter = 0; channelcounter < channelnumber; channelcounter++){   // loop for measuring all channels
+        channel[(counter * channelnumber) + channelcounter]=pulseIn(inputpin, HIGH);
+      }
+      synclength[counter]  = pulseIn(inputpin, HIGH);                 // get syncpulse length
+    }
+    else{                                                                                  // else inverted is selected
+      for (int channelcounter = 0; channelcounter < channelnumber; channelcounter++){      // loop for measuring all channels
+        channel[(counter * channelnumber) + channelcounter]=pulseIn(inputpin, LOW);
+      }
+      synclength[counter]  = pulseIn(inputpin, LOW);                   // get syncpulse length
+    }
+    framelength[counter] = micros() - framelength[counter] ;      // keep difference between start- and endtime
+  if (counter >= (framecount-1)){                                 // if captured enough frames
+    synced = 0;                                                   // set synced to "false"
+    outcounter = 0;                                              // start output with second (third) frame, the first (first to) get measured bad
+    while (outcounter < framecount){                        // loop for all captured frames
+     
+     if(channel[0]>offset_max)
+     {
+       right();
+     }
+     else if(channel[0]&lt;offset_min)
+     {
+       left();
+     }
+     else if(channel[1]>offset_max)
+     {
+       forward();
+     }
+     else if(channel[1]&lt;offset_min)
+     {
+       back();
+     }
+     else
+     {
+       halt();
+     }
+      
+                                                        
+      Serial.println("");                                                                         
+      outcounter++;                                                                                  
+    }
+    Serial.println("");                                                                              
+    counter = 0;                                                                                    
+   }
+   else{                                                                                           
+    counter++;                                                                                    
+   }
+  } 
+
+ }
+}
+<br>
+							</pre>
+						</div>
+						<a href="#" class="view_mo_t tws-3bt"><img src="images/btn_covideo.png"></a>
+					</div>
+				</div>
+			</div>
+			<!-- 34 -->
+			<div class="slide">
+				<div class="zjn2 tws2">
+					<div class="tws2_1"><img src="images/tws_txt03.png"></div>
+					<div class="tws2_2 autosro">
+						<p>
+<pre id="toHtml">
+
+
+							</pre>
+						</p>
+						<a href="#" class="view_mo_t tws-3bt"><img src="images/btn_covideo.png"></a>
+					</div>
+				</div>
+			</div>
+			<div class="xingpos xingbottom">
+				<canvas id="xingbottom">Your browser does not support the canvas element. </canvas>
+			</div>
+		    <div class="bx"></div>
+		</div>
+
+			<div class="jiabinBox2">
+				<!-- 31 -->
+				<div class="slide">
+					<div class="zjn">
+						<div class="zjn_lef">
+							<img src="images/zjn_txt01.png">
+							<img src="images/zjn_rb.png" class="zj_name">
+						</div>
+						<div class="zjn_rig">
+							<img src="images/zjn01.png" style="width:73%">
+						</div>
+					</div>
+				</div>
+				<!-- 32 -->
+				<div class="slide">
+					<div class="zjn2">
+						<div class="zjn2L">
+							<img src="images/zjn_txt02.png">
+						</div>
+						<div class="zjn2R">
+							<p>
+								public static String speechToText(String audioUrl) { <br>
+								SpeechToText service = new SpeechToText();<br>
+								// service.setUsernameAndPassword("cedf80b0-7834-4c6d-bf1f-2f97cbfc9b61",<br>
+								// "bhRWf6nInRrm");<br>
+								service.setUsernameAndPassword(Constants.STT_USERNAME,<br>
+								Constants.STT_PASSWORD);<br>
+								// File audio = new<br>
+								// File("F:\\AndroidCode\\text-to-speech-java\\howareyou.wav");<br>
+								File audio = new File(audioUrl);<br>
+								Map&lt;String, Object> params = new HashMap&lt;String, Object>();<br>
+								params.put("audio", audio);<br>
+								params.put("content_type", "audio/wav; rate=16000"); // flac or war file<br>
+								// format<br>
+								//params.put("model", "en-US_BroadbandModel"); // english<br>
+								params.put("model", "zh-CN_BroadbandModel"); // english<br>
+								params.put("word_confidence", false);<br>
+								params.put("continuous", false);<br>
+								params.put("timestamps", false);<br>
+								params.put("inactivity_timeout", 30);<br>
+								params.put("max_alternatives", 1);<br>
+
+								SpeechResults speechResults = service.recognize(params);<br>
+								List&lt;Transcript&gt; transcriptList = speechResults.getResults();<br>
+								SpeechAlternative speechAlternative = transcriptList.get(0)<br>
+								.getAlternatives().get(0);<br>
+
+								return speechAlternative.getTranscript();<br>
+								}
+
+							</p>
+							<a href="#" class="view_mo"><img src="images/btn_covideo.png"></a>
+						</div>
+					</div>
+				</div>
+				<!-- 33 -->
+				<div class="slide">
+					<div class="zjn">
+						<div class="zjn_lef zjn3L">
+							<img src="images/zjn_txt03.png">
+							<img src="images/zjn_rb.png" class="zj_name">
+						</div>
+						<div class="zjn_rig">
+							<img src="images/zjn02.png">
+						</div>
+					</div>
+				</div>
+				<!-- 34 -->
+				<div class="slide">
+					<div class="zjn2 zjn4">
+						<div class="zjn2L">
+							<img src="images/zjn_txt04.png">
+						</div>
+						<div class="zjn2R">
+							<p>
+								public static String speechToText(String audioUrl) {
+								SpeechToText service = new SpeechToText();
+								// service.setUsernameAndPassword("cedf80b0-7834-4c6d-bf1f-2f97cbfc9b61",
+								// "bhRWf6nInRrm");
+								service.setUsernameAndPassword(Constants.STT_USERNAME,
+								Constants.STT_PASSWORD);
+								// File audio = new
+								// File("F:\\AndroidCode\\text-to-speech-java\\howareyou.wav");
+								File audio = new File(audioUrl);
+								Map&lt;String, Object> params = new HashMap&lt;String, Object>();
+								params.put("audio", audio);
+								params.put("content_type", "audio/wav; rate=16000"); // flac or war file
+								// format
+								//params.put("model", "en-US_BroadbandModel"); // english
+								params.put("model", "zh-CN_BroadbandModel"); // english
+								params.put("word_confidence", false);
+								params.put("continuous", false);
+								params.put("timestamps", false);
+								params.put("inactivity_timeout", 30);
+								params.put("max_alternatives", 1);
+
+								SpeechResults speechResults = service.recognize(params);
+								List&lt;Transcript&gt; transcriptList = speechResults.getResults();
+								SpeechAlternative speechAlternative = transcriptList.get(0)
+								.getAlternatives().get(0);
+
+								return speechAlternative.getTranscript();
+								}
+
+							</p>
+							<a href="#" class="view_mo"><img src="images/btn_covideo.png"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+
+		
+		<!-- jiabin2 田文生-->
+		<!-- <div class="main section">
+			<div class="logo"><img src="images/logo.png"></div>
+			<div class="iotlb"><img src="images/iot_w.png"></div>
+			
+			</div> -->
+
+		<!-- jiabin
+		<div class="main section">
+			<div class="logo"><img src="images/logo.png"></div>
+			
+			<div class="slide">
+				<div class="zjn">
+					<div class="zjn_lef">
+						<img src="images/zjn_txt01.png">
+						<img src="images/zjn_rb.png" class="zj_name">
+					</div>
+					<div class="zjn_rig">
+						<img src="images/zjn01.png">
+					</div>
+				</div>
+			</div>
+			
+			<div class="slide">
+				<div class="zjn2">
+					<div class="zjn2L">
+						<img src="images/zjn_txt02.png">
+					</div>
+					<div class="zjn2R">
+						<p>
+							public static String speechToText(String audioUrl) { <br>
+							SpeechToText service = new SpeechToText();<br>
+							// service.setUsernameAndPassword("cedf80b0-7834-4c6d-bf1f-2f97cbfc9b61",<br>
+							// "bhRWf6nInRrm");<br>
+							service.setUsernameAndPassword(Constants.STT_USERNAME,<br>
+							Constants.STT_PASSWORD);<br>
+							// File audio = new<br>
+							// File("F:\\AndroidCode\\text-to-speech-java\\howareyou.wav");<br>
+							File audio = new File(audioUrl);<br>
+							Map<String, Object> params = new HashMap<String, Object>();<br>
+							params.put("audio", audio);<br>
+							params.put("content_type", "audio/wav; rate=16000"); // flac or war file<br>
+							// format<br>
+							//params.put("model", "en-US_BroadbandModel"); // english<br>
+							params.put("model", "zh-CN_BroadbandModel"); // english<br>
+							params.put("word_confidence", false);<br>
+							params.put("continuous", false);<br>
+							params.put("timestamps", false);<br>
+							params.put("inactivity_timeout", 30);<br>
+							params.put("max_alternatives", 1);<br>
+
+							SpeechResults speechResults = service.recognize(params);<br>
+							List<Transcript> transcriptList = speechResults.getResults();<br>
+							SpeechAlternative speechAlternative = transcriptList.get(0)<br>
+							.getAlternatives().get(0);<br>
+
+							return speechAlternative.getTranscript();<br>
+							}
+
+						</p>
+						<a href="#" class="view_mo"><img src="images/btn_covideo.png"></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="slide">
+				<div class="zjn">
+					<div class="zjn_lef zjn3L">
+						<img src="images/zjn_txt03.png">
+						<img src="images/zjn_rb.png" class="zj_name">
+					</div>
+					<div class="zjn_rig">
+						<img src="images/zjn02.png">
+					</div>
+				</div>
+			</div>
+			
+			<div class="slide">
+				<div class="zjn2 zjn4">
+					<div class="zjn2L">
+						<img src="images/zjn_txt04.png">
+					</div>
+					<div class="zjn2R">
+						<p>
+							public static String speechToText(String audioUrl) {
+							SpeechToText service = new SpeechToText();
+							// service.setUsernameAndPassword("cedf80b0-7834-4c6d-bf1f-2f97cbfc9b61",
+							// "bhRWf6nInRrm");
+							service.setUsernameAndPassword(Constants.STT_USERNAME,
+							Constants.STT_PASSWORD);
+							// File audio = new
+							// File("F:\\AndroidCode\\text-to-speech-java\\howareyou.wav");
+							File audio = new File(audioUrl);
+							Map<String, Object> params = new HashMap<String, Object>();
+							params.put("audio", audio);
+							params.put("content_type", "audio/wav; rate=16000"); // flac or war file
+							// format
+							//params.put("model", "en-US_BroadbandModel"); // english
+							params.put("model", "zh-CN_BroadbandModel"); // english
+							params.put("word_confidence", false);
+							params.put("continuous", false);
+							params.put("timestamps", false);
+							params.put("inactivity_timeout", 30);
+							params.put("max_alternatives", 1);
+
+							SpeechResults speechResults = service.recognize(params);
+							List<Transcript> transcriptList = speechResults.getResults();
+							SpeechAlternative speechAlternative = transcriptList.get(0)
+							.getAlternatives().get(0);
+
+							return speechAlternative.getTranscript();
+							}
+
+						</p>
+						<a href="#" class="view_mo"><img src="images/btn_covideo.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+ -->
+
+		<div class="main section pagelast">
+			<div class="dd">
+				<div class="sec04main">
+					<span class="logo01"><img src="images/logico_01.png" alt=""></span>
+					<span class="logo02"><img src="images/logico_02.png" alt=""></span>
+					<span class="logo03"><img src="images/logico_03.png" alt=""></span>
+					<span class="logo04"><img src="images/logico_04.png" alt=""></span>
+					<span class="logo05"><img src="images/logico_05.png" alt=""></span>
+					<span class="logo06"><img src="images/logico_06.png" alt=""></span>
+					<span class="logo07"><img src="images/logico_07.png" alt=""></span>
+					<span class="logo08"><img src="images/logico_08.png" alt=""></span>
+					<span class="logo09"><img src="images/logico_09.png" alt=""></span>
+					<span class="logo10"><img src="images/logico_10.png" alt=""></span>
+					<span class="logo11"><img src="images/logico_11.png" alt=""></span>
+					<span class="logo12"><img src="images/logico_09.png" alt=""></span>
+					<span class="logo13"><img src="images/logico_13.png" alt=""></span>
+					<span class="logo14"><img src="images/logico_06.png" alt=""></span>
+					<a href="#" class="p4_btn1"><img src="images/btn_blue.png"></a>
+					<a href="#" class="p4_btn2"><img src="images/btn_share.png"></a>
+					<a href="#" class="p4_btn3"><img src="images/btn_dz.png"></a>
+				</div>
+			</div>
+		</div>
+</body>
+</html>  

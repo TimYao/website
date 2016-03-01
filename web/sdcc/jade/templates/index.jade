@@ -1,0 +1,667 @@
+extends ../layouts/layout.jade
+block css
+  title SDCC
+  link( rel="stylesheet" href="static/css/main.css" type="text/css")
+
+
+block through
+  //导航 开始
+  include ../modules/mod_header.jade
+  //导航 结束
+
+  //banner 开始
+  .banner
+    img.banner01(src="static/images/banner_bg.jpg" alt="")
+    img.banner02(src="static/images/banner_sub.jpg" alt="")
+  //banner 结束
+
+  //新闻热点 开始
+  .hot_news
+    h2.HN_tit
+      em 大会介绍
+    .HN_con
+      .row
+        .col-md-12.col-sm-12.col-xs-12
+          p.ptexts
+            | 3月18日-19日，由CSDN重磅打造的互联网应用架构实战峰会、数据库核心技术与实战应用峰会将在上海举行。
+            br/
+            | 作为SDCC 2016（中国软件开发者大会）系列技术峰会的一部分，
+            br/
+            | 秉承干货实料（案例）的内容原则，这两场峰会将邀请业内顶尖的架构师和技术专家，
+            br/
+            | 共同探讨高可用/高并发系统架构设计、新技术应用、
+            br/
+            | 传统企业如何拥抱互联网+架构、云数据库实战、新一代数据库平台、性能调优、大数据应用实战等领域的话题与技术。
+  a(name="dahuiliangdian")
+  .und_conference.clearfix(id="date-highlights")
+    h2.HN_tit
+      em 大会亮点
+    .row.und_div.clearfix
+      .col-md-6.col-sm-6.col-xs-12.pull-left
+        .col-nei.clearfix
+          p.mainTitle
+            | 3月18日  -  数据库核心技术与实战应用峰会
+            span.icons
+          p.maincontent
+            | 知名网站、热点场景、行业应用
+            br/
+            | 阿里双11分布式数据库实战、腾讯QQ大数据平台
+            br/
+            | 架构/实战、金融/电信数据演变
+            span.icons 1
+          p.maincontent
+            | 大数据治理和深度应用
+            span.icons 2
+        p.pbtns
+          a.btns.btnalls(href="") 立即购票
+      .col-md-6.col-sm-6.col-xs-12.pull-left.col-nei-r
+        .col-nei.clearfix
+          p.mainTitle
+              | 3月18日  -  数据库核心技术与实战应用峰会
+              span.icons
+          p.maincontent
+              | 知名/热门互联网公司架构选型/转型/变迁/优化实战阿里/京东/
+              br/
+              | 腾讯（微信）/小米/微博/美拍/滴滴/搜狗
+              span.icons 1
+          p.maincontent
+              | 议题范围覆盖时下架构实践相关重点议题
+              br/
+              | 各种规模企业在高可用、高并发、历史遗留系统实践、新技术应用
+              br/
+              | （容器、混合云平台架构分析及优化等
+              span.icons 2
+          p.maincontent
+            | 传统企业如何应对互联网新技术浪潮
+            br/
+            | 传统企业架构转型、架构驱动业务增长案例设计与实践）、架构选
+            br/
+            | 型、典型中小型网站
+            span.icons 3
+        p.pbtns
+          a.btns.btnalls(href="") 立即购票
+  a(name="dahuiricheng")
+  .hot_news(id="date-schedule")
+    h2.HN_tit
+        em 日程安排
+    .row.daterc
+      .col-md-6.col-sm-6.col-xs-12.pull-left.ltable
+        table.table
+          caption 3月18日 - 数据库核心技术与实战应用峰会
+          thead
+            tr
+              th 时间
+              th 时 议题/演讲嘉宾
+          tbody
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | 揭秘全球最大一站式出行平台的技术真相
+                br/
+                | 李添翼  滴滴专车技术总监
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | 揭秘全球最大一站式出行平台的技术真相
+                br/
+                | 李添翼  滴滴专车技术总监
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+      .col-md-6.col-sm-6.col-xs-12.pull-left.rtable
+        table.table
+          caption 3月18日 - 数据库核心技术与实战应用峰会
+          thead
+            tr
+              th 时间
+              th 时 议题/演讲嘉宾
+          tbody
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | 揭秘全球最大一站式出行平台的技术真相
+                br/
+                | 李添翼  滴滴专车技术总监
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+            tr
+              td 08:00 - 09:30
+              td
+                | 揭秘全球最大一站式出行平台的技术真相
+                br/
+                | 李添翼  滴滴专车技术总监
+            tr
+              td 08:00 - 09:30
+              td
+                | Building distributed fault-tolerant applications with Elixir
+                br/
+                | ThoughtWorks首席咨询师王健
+  a(name="yanjiangjiabin")
+  .und_conference(id="date-guests")
+    h2.HN_tit
+      em 首批公布演讲嘉宾
+    .row.announce.daterc
+      p.toptitle 数据库核心技术与实战应用峰会
+      .announce_contents
+        .row
+          .announce_wrap.col-md-4.col-sm-4.col-xs-12.col-lg-4
+            .listphotos
+              span.imgs.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                img(src="static/images/test.gif",alt="")
+              span.text.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                em ebastian Thrun
+                i 前爱立信首席架构师首席架构师
+                b 前爱立信首席架构师首席架构师前爱立信首席架构前爱立信首席架构师首席架构师前爱立信首席架构前爱立信首席架构师首席架构师前爱立信首席架构
+              .mark
+              span.text2
+                a(href="") Sebastian Thrun
+                b 一一一
+                i 揭秘全球最大一站式出行平台的技术真相
+          .announce_wrap.col-md-4.col-sm-4.col-xs-12.col-lg-4
+            .listphotos
+              span.imgs.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                img(src="static/images/test.gif",alt="")
+              span.text.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                em ebastian Thrun
+                i 前爱立信首席架构师首席架构师
+                b 前爱立信首席架构师首席架构师前爱立信首席架构
+              .mark
+              span.text2
+                a(href="") Sebastian Thrun
+                b 一一一
+                i 揭秘全球最大一站式出行平台的技术真相
+          .announce_wrap.col-md-4.col-sm-4.col-xs-12.col-lg-4
+            .listphotos
+              span.imgs.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                img(src="static/images/test.gif",alt="")
+              span.text.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                em ebastian Thrun
+                i 前爱立信首席架构师首席架构师
+                b 前爱立信首席架构师首席架构师前爱立信首席架构
+              .mark
+              span.text2
+                a(href="") Sebastian Thrun
+                b 一一一
+                i 揭秘全球最大一站式出行平台的技术真相
+        .row
+          .announce_wrap.col-md-4.col-sm-4.col-xs-12.col-lg-4
+            .listphotos
+              span.imgs.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                img(src="static/images/test.gif",alt="")
+              span.text.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                em ebastian Thrun
+                i 前爱立信首席架构师首席架构师
+                b 前爱立信首席架构师首席架构师前爱立信首席架构
+              .mark
+              span.text2
+                a(href="") Sebastian Thrun
+                b 一一一
+                i 揭秘全球最大一站式出行平台的技术真相
+          .announce_wrap.col-md-4.col-sm-4.col-xs-12.col-lg-4
+            .listphotos
+              span.imgs.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                img(src="static/images/test.gif",alt="")
+              span.text.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                em ebastian Thrun
+                i 前爱立信首席架构师首席架构师
+                b 前爱立信首席架构师首席架构师前爱立信首席架构
+              .mark
+              span.text2
+                a(href="") Sebastian Thrun
+                b 一一一
+                i 揭秘全球最大一站式出行平台的技术真相
+          .announce_wrap.col-md-4.col-sm-4.col-xs-12.col-lg-4
+            .listphotos
+              span.imgs.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                img(src="static/images/test.gif",alt="")
+              span.text.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                em ebastian Thrun
+                i 前爱立信首席架构师首席架构师
+                b 前爱立信首席架构师首席架构师前爱立信首席架构
+              .mark
+              span.text2
+                a(href="") Sebastian Thrun
+                b 一一一
+                i 揭秘全球最大一站式出行平台的技术真相
+      p.toptitle 互联网应用架构实战峰会
+      .announce_contents
+        .row
+          .announce_wrap.col-md-4.col-sm-4.col-xs-12.col-lg-4
+            .listphotos
+              span.imgs.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                img(src="static/images/test.gif",alt="")
+              span.text.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                em ebastian Thrun
+                i 前爱立信首席架构师首席架构师
+                b 前爱立信首席架构师首席架构师前爱立信首席架构
+              .mark
+              span.text2
+                a(href="") Sebastian Thrun
+                b 一一一
+                i 揭秘全球最大一站式出行平台的技术真相
+          .announce_wrap.col-md-4.col-sm-4.col-xs-12.col-lg-4
+            .listphotos
+              span.imgs.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                img(src="static/images/test.gif",alt="")
+              span.text.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                em ebastian Thrun
+                i 前爱立信首席架构师首席架构师
+                b 前爱立信首席架构师首席架构师前爱立信首席架构
+              .mark
+              span.text2
+                a(href="") Sebastian Thrun
+                b 一一一
+                i 揭秘全球最大一站式出行平台的技术真相
+          .announce_wrap.col-md-4.col-sm-4.col-xs-12.col-lg-4
+            .listphotos
+              span.imgs.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                img(src="static/images/test.gif",alt="")
+              span.text.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                em ebastian Thrun
+                i 前爱立信首席架构师首席架构师
+                b 前爱立信首席架构师首席架构师前爱立信首席架构
+              .mark
+              span.text2
+                a(href="") Sebastian Thrun
+                b 一一一
+                i 揭秘全球最大一站式出行平台的技术真相
+        .row
+          .announce_wrap.col-md-4.col-sm-4.col-xs-12.col-lg-4
+            .listphotos
+              span.imgs.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                img(src="static/images/test.gif",alt="")
+              span.text.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                em ebastian Thrun
+                i 前爱立信首席架构师首席架构师
+                b 前爱立信首席架构师首席架构师前爱立信首席架构
+              .mark
+              span.text2
+                a(href="") Sebastian Thrun
+                b 一一一
+                i 揭秘全球最大一站式出行平台的技术真相
+          .announce_wrap.col-md-4.col-sm-4.col-xs-12.col-lg-4
+            .listphotos
+              span.imgs.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                img(src="static/images/test.gif",alt="")
+              span.text.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                em ebastian Thrun
+                i 前爱立信首席架构师首席架构师
+                b 前爱立信首席架构师首席架构师前爱立信首席架构
+              .mark
+              span.text2
+                a(href="") Sebastian Thrun
+                b 一一一
+                i 揭秘全球最大一站式出行平台的技术真相
+          .announce_wrap.col-md-4.col-sm-4.col-xs-12.col-lg-4
+            .listphotos
+              span.imgs.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                img(src="static/images/test.gif",alt="")
+              span.text.col-md-6.col-sm-6.col-xs-6.col-lg-6
+                em ebastian Thrun
+                i 前爱立信首席架构师首席架构师
+                b 前爱立信首席架构师首席架构师前爱立信首席架构
+              .mark
+              span.text2
+                a(href="") Sebastian Thrun
+                b 一一一
+                i 揭秘全球最大一站式出行平台的技术真相
+  a(name="goupiaoxinxi")
+  .hot_news(id="date-tickets")
+    h2.HN_tit
+      em 购票参会
+    .row.goup
+      table.table.pctable
+        thead
+          tr
+            th(width="30%").tborder
+            th(width="15%") 票种
+            th(width="20%") 即日起-2.29
+            th(width="20%") 2.15-2.29
+            th(width="15%") 3.1-3.17
+        tbody
+          tr
+            td.greenback.ctext 18日互联网应用架构实战峰会单日票
+            td
+              span 个人票
+              span 团体票
+            td
+              span 1000
+              span.textcenter 1000
+            td
+              span 1000
+              span &nbsp;
+            td
+              span 1000
+              span 800
+          tr
+            td.ctext.blueback 19日数据库核心技术与实战应用峰会单日票
+            td
+              span 个人票
+              span 团体票
+            td
+              span 1000
+              span.textcenter 800
+            td
+              span 1000
+              span &nbsp;
+            td
+              span 1000
+              span &nbsp;
+          tr
+            td.ctext.orgenback 2天会议通票
+            td
+              span 个人票
+              span 团体票
+            td
+              span 1000
+              span.textcenter 800
+            td
+              span 1000
+              span &nbsp;
+            td
+              span 1000
+              span &nbsp;
+      table.table.mobiletable
+        thead
+          tr
+            th.greenback(colspan=4,width="100%") 18日互联网应用架构实战峰会单日票
+        tbody
+          tr
+            td(width="30%") 票种
+            td(width="30%") 即日起-2.29
+            td(width="20%") 2.15-2.29
+            td(width="20%") 3.1-3.17
+          tr
+            td 个人票
+            td 599
+            td 1000
+            td 1000
+          tr
+            td 团体票（5张以上）
+            td(colspan=2) 599
+            td 799
+      table.table.mobiletable
+        thead
+          tr
+            th.blueback(colspan=4,width="100%") 19日数据库核心技术与实战应用峰会单日票
+        tbody
+          tr
+            td(width="30%") 票种
+            td(width="30%") 即日起-2.29
+            td(width="20%") 2.15-2.29
+            td(width="20%") 3.1-3.17
+          tr
+            td 个人票
+            td 599
+            td 1000
+            td 1000
+          tr
+            td 团体票（5张以上）
+            td(colspan=2) 599
+            td 799
+      table.table.mobiletable
+        thead
+          tr
+            th.orgenback(colspan=4,width="100%") 2天会议通票
+        tbody
+          tr
+            td(width="30%") 票种
+            td(width="30%") 即日起-2.29
+            td(width="20%") 2.15-2.29
+            td(width="20%") 3.1-3.17
+          tr
+            td 个人票
+            td 599
+            td 1000
+            td 1000
+          tr
+            td 团体票（5张以上）
+            td(colspan=2) 599
+            td 799
+      .row.clearfix
+        .pull-left.col-md-6.col-sm-6.col-xs-12
+          em.qy 权益：1、全天会议；2、大会资料；3、午餐
+        .pull-right.col-md-6.col-sm-6.col-xs-12.rc
+          a.seeorder(href="") 查看订单
+          span.line &nbsp;
+          a.download(href="") 邀请函下载
+      p.pbtns.clearfix
+        a.btns.btnalls(href="") 立即购票
+  a(name="gouwuhc")
+  .und_conference.backimg(id="date-infors")
+    h2.HN_tit
+      em 会场信息
+    .row.announce.daterc
+      p.infortext
+        | 上海·喜玛拉雅中心大观舞台
+        br/
+        em （浦东新区芳甸路1188号，七号线花木路站）
+    .row
+      .leftimg
+        img(src="static/images/limg.png",alt="")
+      .rightimg
+        img(src="static/images/rimg.png",alt="")
+
+  //底部 开始
+  include ../modules/mod_footer.jade
+  //底部 结束
+
+  //返回顶部 开始
+  include ../modules/mod_backTop
+  //返回顶部 结束
+block script
+  script( src="static/js/main.js")
+  script( src="static/js/jQuery.js")
+  script.
+    $(function(){
+        /*滚动触发导航悬浮事件*/
+        $(document).scroll(function(){
+            var scroll_t = parseInt($(document).scrollTop());
+            if(scroll_t>84){
+                $(".header").addClass('headerBg');
+                $(".navbar").addClass('navbarBg');
+            }else{
+                $(".header").removeClass('headerBg');
+                $(".navbar").removeClass('navbarBg');
+            };
+        });
+        /*返回顶部*/
+        scrolltopBar();
+
+      //门票优惠销售中悬浮
+      $(window).on('resize',function(){
+        $(".ad_spread").css({"left":$(".navbar-nav").offset().left+$(".navbar-nav").innerWidth()+20,"top":0});
+        $(".listphotos").height($(".listphotos").find('img').height());
+      });
+      $(".ad_spread").css({"left":$(".navbar-nav").offset().left+$(".navbar-nav").innerWidth()+20,"top":0});
+      $(".listphotos").height($(".listphotos").find('img').height());
+
+      (function(){
+         var alldata = ['date-highlights','date-schedule','date-guests','date-tickets','date-infors'];
+         var allarrs = [];
+         var maxhe = [];
+         var navbars = $(".navbar-nav");
+         var w = document.documentElement.getBoundingClientRect().width;
+         var h = $(window).height();
+         var flg = true;
+         var browser = {
+          versions: function () {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {
+              trident: u.indexOf('Trident') > -1, //IE内核
+              presto: u.indexOf('Presto') > -1, //opera内核
+              webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+              gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+              mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+              ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+              android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+              iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器|| u.indexOf('Mac') > -1
+              iPad: u.indexOf('iPad') > -1, //是否iPad
+              webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+            };
+          }()
+        };
+        for(var i=0;i<alldata.length;i++)
+        {
+            allarrs[i] = parseFloat($("#"+alldata[i]).offset().top,10);
+            maxhe.push(allarrs[i]+parseFloat($("#"+alldata[i]).innerHeight(),10));
+        }
+        $(document).on('scroll',function(){
+          if(w>768)
+          {
+            setactive();
+          }
+        });
+        if(w>768)
+        {
+          setactive();
+        }
+        if(browser.versions.android)
+        {
+           flg = false;
+        }else if(browser.versions.iPhone)
+        {
+           flg = false;
+        }else{
+           flg = true;
+        }
+        if(flg)
+        {
+          setHover();
+        }
+        setclose();
+        function setactive()
+        {
+          var ht = $(document).scrollTop();
+          var cur = 0;
+          var heardh = parseFloat($(".header").innerHeight(),10);
+          var bodyh = document.documentElement.scrollHeight || document.body.scrollHeight;
+          navbars.children('li').find('a').removeClass('active');
+          if(ht<parseFloat($("#"+alldata[0]).offset().top,10) || ht<=0)
+          {
+            cur = 0;
+          }else{
+            for(var j=0;j<allarrs.length;j++)
+            {
+                if(ht+heardh+100>=allarrs[j] && ht+heardh+100<=maxhe[j])
+                  {
+                    cur=j+1;
+                    break;
+                 }
+            }
+            if(ht+heardh>bodyh-h)
+            {
+                cur=allarrs.length;
+            }
+         }
+          navbars.children('li').eq(cur).find('a').addClass('active');
+       }
+       function setHover()
+       {
+         $(".listphotos").hover(function(){
+             $(this).find('.mark').show();
+             $(this).find('.text2').show();
+         },function(){
+             $(this).find('.mark').hide();
+             $(this).find('.text2').hide();
+         });
+       }
+        //控制锚点和关闭下拉菜单
+       function setclose()
+       {
+         $('.navbar-nav .dropdown a').on('click', function (event) {
+           $(this).attr("href", $(this).attr("name"));
+           if($(".navbar-toggle").length>0 && $(".navbar-toggle").css("display").toLowerCase()==="block")
+           {
+             $(".navbar-toggle").trigger('click');
+           }
+         });
+       }
+      })();
+    })
+      

@@ -1,0 +1,285 @@
+$mod_header()
+    /* 头部导航栏 开始 */
+    .header
+        width 100%
+        position relative
+        .navbar-inverse
+            border-bottom none
+        .logo
+            width 100%
+            height 62px
+            display block
+            background: url("../images/logo.png") no-repeat left center
+            background-size contain
+    .header .navbar
+        border-bottom 0
+        margin-bottom 0
+        background-color #161616
+    .headerBg
+        position fixed
+        top 0
+        z-index: 1900
+    .headerBg,.header .navbarBg
+        -webkit-transition background 0.5s ease-in-out
+        -moz-transition background 0.5s ease-in-out
+        -o-transition background 0.5s ease-in-out
+        transition background 0.5s ease-in-out
+        background rgba(0,0,0,0.6)
+    .navbar-header
+        background-color transparent
+    .header .navbar .dropdown-toggle
+        text-align center
+        color  #fff
+        cursor pointer
+    .header .navbar .dropdown
+        padding 15px
+        padding-left 18px
+        padding-right 18px
+    .header .navbar .dropdown h3 a
+        font-size 16px
+        color #fff
+        line-height 18px
+        &:hover,&.active
+            color #00a46e
+        &.active
+            font-weight bold
+    .header .navbar .navCurrent
+        color #00a46e
+    .header .navbar .dropdown-menu
+        border-radius 0
+    .header .navbar .dropdown-menu > li > a
+        &:hover
+            background-color #0368ac
+            color: #fff
+    .navbar-inverse .navbar-toggle
+        border-color transparent
+        background-color transparent
+    .navbar-inverse .navbar-toggle .icon-bar
+        background-color #00a46f
+        margin 5px 0
+        width 30px
+        height 3px
+    .logo_box1
+        width 222px
+        margin-left 15px
+    .logo_box2
+        display none
+    .pull-left
+        float none !important
+    .ad_spread01
+      position fixed
+      left 0
+      bottom 0
+      display none
+      color #fff !important
+      background rgba(254, 147, 61, 0.8)
+      padding 13px 100px
+      font-size 16px
+      z-index 10000
+      text-align center
+    @media (max-width: 767px)
+        .head-cont
+            position absolute
+            width 100%
+            padding 5px
+        .head-cont .logo
+            height 30px
+            margin 5px 0 0 5px
+        .head-cont h4
+            white-space nowrap
+            overflow hidden
+            text-overflow ellipsis
+        .logo_box1
+            max-width 276px
+            margin-top 1px
+        .navbar .navbar-nav
+            margin 0 -15px
+        .navbar .dropdown
+            background-color #e8f9ff
+            border-top 1px solid #01a46f
+        .navbar-collapse
+            border-top 0
+        .navbar .dropdown .dropdown-menu
+            background-color #fff !important
+            margin-left -18px
+            margin-right -18px
+            margin-bottom -4px
+        .header .navbar .dropdown h3 a
+            font-size 18px
+            color #00a46e
+            line-height 18px
+            &:hover,&.active
+                color #ffffff
+        .header .navCurrent
+            background-color #00a46e
+        .navbar .dropdown .dropdown-menu a:hover
+            color #2b80c1 !important
+        .ad_spread01
+          display block
+    @media (max-width: 640px)
+        .ad_spread01
+          width 100%
+          padding 13px 0
+    @media only screen and (min-width: 768px) and (max-width: 991px)
+        .container
+            padding-right 0px
+            padding-left 0px
+        .header .head-cont
+            height 120px
+        .header .head-cont .logo
+            height 80px
+            margin-top 20px
+        .header .navbar .dropdown
+            padding 8px 5px
+        .header .navbar .dropdown:hover .dropdown-menu
+            display block
+        .logo_box1
+            display none
+        .logo_box2
+            display block
+            float left
+            width 276px
+            margin-right 20px
+            margin-top 5px
+            margin-bottom 5px
+        .navbar-nav
+            margin-top 13px
+    @media only screen and (min-width: 992px) and (max-width: 1199px)
+        .logo_box1
+            display none
+        .logo_box2
+            display block
+            float left
+            width 20%
+            max-width 276px
+            margin-right 54px
+            margin-top 5px
+            margin-bottom 5px
+        .navbar-nav
+            margin-top: 7px;
+    @media (min-width: 1140px)
+        .header .navbar .fa-home
+            font-size 30px
+            line-height 100%
+            margin 0 20px -10px -20px
+            color #fff
+        .header .navbar .dropdown
+            padding 10px 15px
+        .header .navbar .dropdown:hover .dropdown-menu
+            display block
+        /*.headerBg
+            background none*/
+        .container
+            padding-bottom 10px
+        .navbar-header
+            display none
+        .logo_box2
+            display block
+            float left
+            width 20%
+            max-width 276px
+            margin-right 54px
+            margin-top 11px
+        .navbar-nav
+            margin-top 17px
+        .header .navbar .dropdown h3 a
+            font-size 16px
+
+    /* 售票推广 开始 */
+    .ad_spread
+        position fixed
+        width 282px
+        background url("../images/adver.png") no-repeat center
+        padding 0 6px
+        z-index 10000
+        left 1231px
+        top 0
+        display block
+        a
+            display block
+            padding 0 25px
+            color #ffffff
+            text-align center
+            span
+                display block
+            .ad_desc01
+                font-size 12px
+                line-height 24px
+                b
+                    font-size 18px
+                    line-height 40px
+                    font-weight bold
+                    margin-top 5px
+                    display inline-block
+            .ad_desc02
+                font-size 20px
+                display block
+                margin 15px 0
+                padding 10px 10px
+                color #ff9900
+                background-color #fff
+                font-weight bold
+
+    @media (max-width: 320px)
+        .ad_spread
+            display none
+    @media (min-width: 321px) and (max-width: 767px)
+        .ad_spread
+            display none
+    @media (min-width: 768px) and (max-width: 991px)
+        .ad_spread
+            display none
+        .ad_spread01
+            display block
+    @media only screen and (min-width: 992px) and (max-width: 1199px)
+        .ad_spread
+            display none
+            top 0
+            right 0
+        .ad_spread01
+            display block
+    @media (min-width: 1160px)
+      .ad_spread
+        display block
+      .ad_spread01
+        display none
+    //@media (max-width: 1200px)
+    //    .ad_spread
+    //        display block
+    //        top 1px
+    //        right 65px
+    //    .ad_spread01
+    //        display none
+    /* 售票推广 结束 */
+
+    /* 信息分享 开始 */
+    .info_shared
+        display none
+    @media (min-width: 768px)
+        .info_shared
+            display block
+            position fixed
+            z-index 901
+            .info_platform
+                border 1px solid #ffffff
+                background-color #35aa8f
+                margin-bottom 3px
+                a
+                    display: block
+                    width 38px
+                    height 38px
+                    img
+                        width 100%
+                        height auto
+    @media (min-width: 768px) and (max-width: 991px)
+        .info_shared
+            top 210px
+            right 0
+    @media only screen and (min-width: 992px) and (max-width: 1199px)
+        .info_shared
+            top 210px
+            right 0
+    @media (min-width: 1200px)
+        .info_shared
+            top 84px
+            right 20px

@@ -1,0 +1,546 @@
+@import '../modules/mod_header'
+$mod_header()
+@import '../modules/mod_backTop'
+$mod_backTop()
+@import '../modules/mod_footer'
+$mod_footer()
+
+
+
+.HN_tit
+  text-align center
+  line-height 30px
+  font-size 30px
+  color #00a46e
+.HN_tit
+  padding 48px 0 36px
+  font-size 28px
+  em
+    background url(../images/HN_tit.png) no-repeat bottom center
+    padding-bottom 20px
+.HIW_tit
+  padding 47px 0 34px
+  background url(../images/HIW_tit.png) no-repeat center 40px
+@media (min-width:1140px)
+  .HN_tit
+    line-height 30px
+    font-size 30px
+  .HN_tit
+    em
+      padding-bottom 30px
+/* banner 开始 */
+.banner
+    text-align center
+    position relative
+    img
+        max-width 100%
+        border 0
+        vertical-align middle
+@media (max-width: 767px)
+    .banner
+        .banner01
+            display none
+        .banner02
+            display inline-block
+@media (min-width: 768px)
+    .banner
+        .banner01
+            display inline-block
+        .banner02
+            display none
+@media (min-width: 640px)
+  .banner
+    img
+      min-width 100%
+
+/* banner 结束 */
+/* 新闻热点 开始 */
+.HN_con
+  width 100%
+  padding 0 15px 10px
+  margin 0 auto
+  position relative
+  overflow hidden
+  p
+    text-align center
+    color #666
+@media (min-width:775px)
+  .HN_con
+    padding 0 15px 0px
+@media (min-width:992px) and (max-width:1139px)
+  .HN_con
+    padding 0 15px 20px 15px
+@media (min-width:1140px)
+  .HN_con
+    width 905px
+    padding 30px 0 50px 0
+    p
+      font-size 16px
+      line-height 2.2
+
+.und_div
+  width 70%
+  margin 0 auto
+  padding 37px 0
+.und_conference
+  background #f5f5f5
+  overflow hidden
+  .announce
+    padding 0 15px
+  .announce_wrap
+    padding 0 15px
+  .pull-left
+    float left !important
+  .pull-right
+    float right !important
+  .col-nei
+    border-right 1px solid #cbcbcb
+    padding 0 25px 40px 0
+    vertical-align top
+    min-height 290px
+    .mainTitle
+      color #2791c9
+      font-weight bold
+      font-size 18px
+      text-align right
+      position relative
+      margin-bottom 25px
+      vertical-align top
+      margin-top -1px
+      float right
+      .icons
+        background url("/static/images/icon01.gif") no-repeat right center
+        position absolute
+        width 19px
+        height 19px
+        display block
+        right -35px
+        top 0px
+    .maincontent
+      font-size 14px
+      color #333333
+      text-align right
+      position relative
+      line-height 1.8
+      margin-bottom 25px
+      float right
+      width 100%
+      word-wrap break-word
+      .icons
+        background url("/static/images/icon02.gif") no-repeat right center
+        position absolute
+        top 5px
+        width 19px
+        height 19px
+        display block
+        color #fff
+        font-size 14px
+        font-family Arial
+        text-align center
+        line-height 19px
+        right -35px
+  .col-nei-r
+    .col-nei
+      border-left 1px solid #cbcbcb
+      padding 0 0px 40px 25px
+      border-right none !important
+      .mainTitle
+        color #14af7b
+        float left
+    .icons
+      top 5px
+      left -35px
+    .maincontent,.mainTitle
+      text-align left
+    .mainTitle
+      .icons
+        background url("/static/images/icon4.gif") no-repeat right center
+    .maincontent
+      .icons
+        background url("/static/images/icon03.gif") no-repeat right center
+    .pbtns
+      text-align left
+      .btns
+        background-color #14af7b
+  .pbtns
+    text-align right
+    padding-right 30px
+    .btns
+      font-size 22px
+      color #fff
+      font-weight bold
+      background-color #2a9cd8
+.btnalls
+  -webkit-box-shadow 0px -3px 3px rgba(10, 9, 9, 0.26) inset
+  -moz-box-shadow 0px -3px 3px rgba(10, 9, 9, 0.26) inset
+  -o-box-shadow 0px -3px 3px rgba(10, 9, 9, 0.26) inset
+  -ms-box-shadow 0px -3px 3px rgba(10, 9, 9, 0.26) inset
+  box-shadow 0px -3px 3px rgba(10, 9, 9, 0.26) inset
+  padding 15px 40px
+  margin-top 35px
+.daterc
+  width 70%
+  margin 0 auto
+  padding 26px 0
+  .pull-left
+    float left !important
+  .pull-right
+    float right !important
+  .table
+    caption
+      font-size 18px
+      color #ffffff
+      text-align center
+    tr
+      td,th
+        color #fff
+      th
+        font-size 16px
+        font-weight normal
+      td
+        font-size 14px
+        &:last-child
+          padding 12px 25px
+      th
+        &:first-child
+          text-align center
+      th
+        &:last-child
+          padding 8px 25px
+        text-align left
+  .ltable
+    caption
+      background-color #33b6fb
+    .table
+      tr
+        td,th
+          &:first-child
+            background-color #208dc6
+        td,th
+          &:last-child
+            background-color #1e83b8
+        td
+          border-top-color #2a9cd8
+  .rtable
+    caption
+      background-color #0cce8d
+    .table
+      tr
+        td,th
+          &:first-child
+            background-color #16bc84
+        td,th
+          &:last-child
+            background-color #14af7b
+        td
+          border-top-color #2fb489
+.announce
+  .toptitle
+    color #666666
+    font-size 22px
+    text-align center
+    padding 0px 0 18px 0
+  .listphotos
+    position relative
+    overflow hidden
+    padding 0 0px !important
+    margin-bottom 30px
+    background-color #12c17e
+    .imgs
+      display inline-block
+      padding 0
+    .text
+      display inline-block
+      padding 10px
+      height 100%
+    .text,em,i
+      white-space nowrap
+      text-overflow ellipsis
+      overflow hidden
+    img
+      max-width 100%
+      min-width 100%
+    em
+      font-size 18px
+      color #fff
+      display block
+      width 100%
+    i
+      font-size 12px
+      color #ffff00
+      width 100%
+    b
+      font-size 14px
+      color #fff
+      display block
+      white-space normal
+  .mark
+    background-color #208dc6
+    opacity 0.8
+    position absolute
+    left 0px
+    display inline-block
+    padding 28px 15px
+    width 100%
+    height 100%
+    top 0
+    display none
+  .text2
+    position absolute
+    width 80%
+    height 60%
+    color #fff
+    left 50%
+    top 50%
+    margin-top -20%
+    margin-left -40%
+    display none
+    a,i
+      color #fff !important
+    a
+      font-size 24px
+      display block
+    i
+      font-size 18px
+      white-space normal
+.goup
+  width 70%
+  margin 0 auto
+  padding 26px 15px
+  .pull-left
+    float left !important
+  .pull-right
+    float right !important
+  table
+    display table
+  .mobiletable
+    tr
+      td
+        text-align center
+        padding 8px
+        vertical-align middle !important
+        font-size 16px
+        color #666666
+      &:nth-child(1)
+        td
+          font-weight bold
+          &:nth-child(1)
+            border-bottom 1px solid #fff
+          &:nth-child(2),&:nth-child(3)
+            background-color #f2f2f2
+          &:nth-child(4)
+            background-color #fff
+      &:nth-child(2)
+        td
+          &:nth-child(1)
+            background-color #f5f5f5
+          &:nth-child(2),&:nth-child(3)
+            background-color #e9e9e9 !important
+          &:nth-child(4)
+            background-color #f5f5f5 !important
+      &:nth-child(1),&:nth-child(2)
+        td
+          &:nth-child(2)
+            border-right 1px solid #fff
+      &:nth-child(3)
+        td
+          border-top 1px solid #fff !important
+          &:nth-child(1)
+            background-color #f5f5f5
+          &:nth-child(2)
+            background-color #e9e9e9 !important
+          &:nth-child(3)
+            background-color #f5f5f5 !important
+  .table
+    width 100%
+    tr
+      th
+        background-color #00a46f
+        color #fff
+        font-size 16px
+        border-color #fff
+        text-align center
+        &:nth-child(3)
+          background-color #009c69
+      .tborder
+        border-right 1px solid #fff
+      .greenback
+        background-color #12c17e
+      .blueback
+        background-color #2a9cd8
+      .orgenback
+        background-color #fe933d
+      .ctext
+        color #fff
+        font-size 16px
+        text-align center
+        border-top 2px solid #fff
+      .nopad
+        padding 0
+        border none
+      td
+        padding 6px 8px
+        vertical-align middle
+        span
+          display block
+          border-bottom 1px solid #fff
+          padding 8px 8px
+          text-align center
+          position relative
+          em
+            position absolute
+            left -6%
+        .textcenter
+          text-align right
+        &:nth-child(2),&:nth-child(5)
+          vertical-align top
+          background #f5f5f5
+          padding 0
+          border none
+        &:nth-child(3)
+          vertical-align top
+          background #e9e9e9
+          padding 0
+          border none
+        &:nth-child(4)
+          vertical-align top
+          background #e9e9e9
+          padding 0
+          border none
+      //table
+      //  padding 0
+      //  width 100%
+      //  border none
+      //  tr
+      //    td
+      //      padding 6px 8px
+      //      font-size 16px
+      //      text-align center
+      //      border-bottom 1px solid #fff
+      //      &:first-child,&:nth-child(3)
+      //        background-color #f5f5f5
+      //      &:nth-child(2)
+      //        background-color #e9e9e9
+      //  .lasttr
+      //    td
+      //      border none
+  .seeorder
+    background url("/static/images/icon05.gif") no-repeat left center
+    display inline-block
+    padding-left 22px
+    color #999
+  .download
+    background url("/static/images/icon06.gif") no-repeat left center
+    display inline-block
+    padding-left 20px
+    color #999
+    margin-right 15px
+  .line
+    border-left 1px solid #cccccc
+    display inline-block
+    line-height 1.8
+    margin 0 30px 0 30px
+    height 15px
+    vertical-align middle
+  .qy
+    font-size 16px
+    color #666
+    display inline-block
+  .rc
+    text-align right
+  .pbtns
+    text-align center
+    .btnalls
+      background-color #ff9900
+      color #fff
+      font-size 28px
+      padding 18px 48px
+.ptexts
+  padding 0 0 30px 0
+.infortext
+  text-align center
+  font-size 18px
+  color #434343
+  line-height 1.8
+  padding 0 0 30px 0
+  em
+    font-size 14px
+.leftimg
+  float left
+  width 50%
+.rightimg
+  float right
+  width 50%
+.rightimg,.leftimg
+  padding 0
+  img
+    width 100%
+    height 100%
+.backimg
+  margin-bottom 0
+  padding-bottom 0 !important
+
+
+@media (min-width:768px)
+  .und_div,.daterc,.goup
+    width 100%
+  .und_conference
+    .col-nei-r
+      margin-top 0
+@media (min-width:992px)
+  .announce,.goup
+    width 100%
+@media (max-width:767px)
+  .daterc,.announce,.goup
+    width 100%
+  .und_div
+    width 70%
+  .und_conference
+    .pbtns
+      text-align center
+      padding-right 0
+      .btnalls
+        margin-top 0px
+    .col-nei
+      padding-bottom 20px
+    .col-nei-r
+      margin-top 60px
+      .pbtns
+        text-align center
+        padding-right 0
+      .btnalls
+        margin-top 0px
+  .col-nei
+    width 80%
+    margin 0 auto
+  .qy
+    margin-bottom 10px
+  .rc
+    text-align left !important
+@media (max-width:640px)
+  .und_div
+    width 83%
+  .goup
+    .pctable
+      display none
+  .goup
+    .mobiletable
+      display table
+@media (min-width:992px)
+  .und_conference
+    padding 40px 15px 30px
+@media (min-width:1140px)
+  .und_conference
+    padding 0px 0 30px 0px
+  .und_div,.daterc,.goup
+    width 70%
+@media (min-width:641px)
+  .goup
+    .pctable
+      display table
+  .goup
+    .mobiletable
+      display none
+
+
+
