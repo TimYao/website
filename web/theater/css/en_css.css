@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+*{padding:0;margin:0;}
+body,html{height:auto;width:100%;font-family:'微软雅黑';}
+body{background:#b88639;}
+ul,ol{list-style:none;}
+a{text-decoration:none;}
+a:visited{}
+a:active{}
+a:hover{}
+img{border:none;}
+.clear{zoom:1;overflow:hidden;width:100%;font-size:0;}
+.clear:after{display:block;clear:both;content:"";visibility:hidden;height:0;}
+
+.blank_5px{height:5px;clear:both;font-size:0;line-height:0;overflow:hidden;}
+.blank_10px{height:10px;clear:both;font-size:0;line-height:0;overflow:hidden;}
+.blank_20px{height:20px;clear:both;font-size:0;line-height:0;overflow:hidden;}
+.blank_30px{height:30px;clear:both;font-size:0;line-height:0;overflow:hidden;}
+
+
+.ibodyBj01{background:url(../images/bodybj01.png) no-repeat top center;}
+.ibodyBj01 .containerIndex{height:1830px;+height:1840px;}
+.showContent{position:relative;top:681px;}
+.showContent ul li{margin:0 0 10px 0;float:left;}
+.showContent ul li .sC{width:412px;height:187px;background:#c89649;padding:15px;float:left;font-family:Arial, Helvetica, sans-serif;position:relative;}
+.showContent ul li .aMargin{margin:0 9px;display:inline;}
+.showContent ul li .aMargin01{margin:0 9px 0 0;}
+.aimg{float:left;display:inline;}
+.showContent ul li .sC span{color:#fff;font-family:Arial, Helvetica, sans-serif;font-size:18px;border-bottom:1px solid #552101;display:block;padding-bottom:5px;}
+.showContent ul li .sC p span{font-size:30px;color:#fff;display:block;border:none;padding:0;}
+.showContent ul li .sC p{font-size:24px;color:#552101;margin-top:10px;}
+.showContent ul li .sC p em{font-style:normal;font-size:18px;color:#fff;}
+.showContent ul li .sC .pMore{margin:0;text-align:right;}
+.aMostbtn{position:absolute;bottom:13px;right:15px;font-family:Arial, Helvetica, sans-serif;font-size:18px;width:210px;height:38px;line-height:38px;color:#fff;background:#552101;display:inline-block;text-align:center;}
+.aMostbtn:hover{text-decoration:underline;}
+
+/*footer*/
+.footer{background:#050505;height:127px;overflow:hidden;padding:5px 0;}
+.footerC{width:417px;margin:0 auto;padding:14px 0 0 0;}
+.footer .footerC ul li{float:left;}
+

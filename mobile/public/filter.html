@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta http-equiv="X-UA-Compatible" content = "IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="screen-orientation" content="portrait">
+	<!-- uc强制竖屏-->
+	<meta name="x5-orientation" content="portrait">
+	<!-- QQ强制竖屏-->
+	<title>公众号</title>
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<link rel="stylesheet" href="css/public.css" />
+	<script src="js/zepto.min.js"></script>
+	<script src="js/public.js"></script>
+</head>
+<body>
+	<div class="container">
+     <div class="filterWrap">
+         <form action="www.baidu.com" method="get">
+             <div class="filterResult clearfix" id="filterResult">
+               <input type="hidden" value="" id="hideData"/>
+               <ul class="clearfix">
+                  <!--<li>
+                     <span>西直门</span><i class="iconfont icon-iconfontguanbi2"></i>
+                  </li>
+                  <li>
+                     <span>商铺</span><i class="iconfont icon-iconfontguanbi2"></i>
+                  </li>
+                  <li>
+                     <span>2000-5000元</span><i class="iconfont icon-iconfontguanbi2"></i>
+                  </li>
+                  <li>
+                     <span>商铺</span><i class="iconfont icon-iconfontguanbi2"></i>
+                  </li>
+                  <li>
+                     <span>2000-5000元</span><i class="iconfont icon-iconfontguanbi2"></i>
+                  </li>-->
+               </ul>
+               <span class="tijiao" id="tijiao">
+                     <input type="submit" id="submitBtn" value="提交">
+               </span>
+             </div>
+             <div class="filteContent clearfix" id="filteContent">
+                
+                <ul class="leftNav fl" id="leftNav">
+                  <li data-flg = 'position'>
+                     <span>位置</span>
+                  </li>
+                  <li data-flg = 'shop'>
+                     <span>商铺类别</span>
+                  </li>
+                  <li data-flg = 'scope'>
+                     <span>可经营范围</span>
+                  </li>
+                  <li data-flg = 'rent'>
+                     <span>租金</span>
+                  </li>
+                  <li data-flg = 'area'>
+                     <span>面积</span>
+                  </li>
+                </ul>
+                <div class="rightContent fl" id="rightContent">
+                  <ul class="ulscroll">
+                     <li data-id="-1">
+                      <i></i>
+                      <span>不限</span>
+                     </li>
+                     <li data-id="2s">
+                      <i></i>
+                      <span>东城</span>
+                     </li>
+                     <li data-id="3d">
+                      <i></i>
+                      <span>西城</span>
+                     </li>
+                     <li data-id="014">
+                      <i></i>
+                      <span>朝阳</span>
+                     </li>
+                     <li data-id="i5">
+                      <i></i>
+                      <span>海淀</span>
+                     </li>
+                     <li data-id="6d">
+                      <i></i>
+                      <span>丰台</span>
+                     </li>
+                     <li data-id="sd7">
+                      <i></i>
+                      <span>石景山</span>
+                     </li>
+                     <li data-id="df8">
+                      <i></i>
+                      <span>昌平</span>
+                     </li>
+                     <li data-id="9xcvxv">
+                      <i></i>
+                      <span>通州</span>
+                     </li>
+                     <li data-id="10xcvxv">
+                      <i></i>
+                      <span>大兴</span>
+                     </li>
+                     <li data-id="4sdfsdf">
+                      <i></i>
+                      <span>朝阳</span>
+                     </li>
+                     <li data-id="5sdf">
+                      <i></i>
+                      <span>海淀</span>
+                     </li>
+                     <li data-id="sdf6sdf">
+                      <i></i>
+                      <span>丰台</span>
+                     </li>
+                     <li data-id="sdf7sdf">
+                      <i></i>
+                      <span>石景山</span>
+                     </li>
+                     <li data-id="8">
+                      <i></i>
+                      <span>昌平</span>
+                     </li>
+                     <li data-id="9">
+                      <i></i>
+                      <span>通州</span>
+                     </li>
+                     <li data-id="10">
+                      <i></i>
+                      <span>大兴</span>
+                     </li>
+                  </ul> 
+                  <div class="subdiv" id="subul">
+                    <!--<ul class="subul" >
+                     <li class="clearfix">
+                      <i></i>
+                      <span>不限</span>
+                      <i></i>
+                     </li>
+                     <li class="clearfix">
+                      <i></i>
+                      <span>安贞</span>
+                      <i></i>
+                     </li>
+                     <li class="clearfix">
+                      <i></i>
+                      <span>奥林匹克公园</span>
+                      <i></i>
+                     </li>
+                     <li class="clearfix">
+                      <i></i>
+                      <span>安慧桥</span>
+                      <i></i>
+                     </li>
+                     <li class="clearfix">
+                      <i></i>
+                      <span>北苑</span>
+                      <i></i>
+                     </li>
+                     <li class="clearfix">
+                      <i></i>
+                      <span>百子湾</span>
+                      <i></i>
+                     </li>
+                     <li class="clearfix">
+                      <i></i>
+                      <span>北沙滩</span>
+                      <i></i>
+                     </li>
+                     <li class="clearfix">
+                      <i></i>
+                      <span>北工大</span><i></i>
+                     </li>
+                     <li class="clearfix">
+                      <i></i>
+                      <span>朝阳公园</span>
+                      <i></i>
+                     </li>
+                     <li class="clearfix">
+                      <i></i>
+                      <span>cbd</span>
+                      <i></i>
+                     </li>
+                     <li class="clearfix">
+                      <i></i>
+                      <span>通州公园</span>
+                      <i></i>
+                     </li>
+                    </ul>-->
+                  </div>
+                  
+                  <ul class="ulscroll">
+                      <li data-id="1">
+                        <i></i>
+                        <span>商铺1</span>
+                      </li>
+                       <li data-id="2">
+                        <i></i>
+                        <span>商铺2</span>
+                       </li>
+                       <li data-id="3">
+                        <i></i>
+                        <span>商铺3</span>
+                       </li>
+                       <li data-id="4">
+                        <i></i>
+                        <span>商铺4</span>
+                       </li> 
+                  </ul>
+
+                  <ul>
+                     <li data-id="1">
+                        <i></i>
+                        <span>范围1</span>
+                     </li>
+                     <li data-id="2">
+                      <i></i>
+                      <span>范围2</span>
+                     </li>
+                     <li data-id="3">
+                      <i></i>
+                      <span>范围3</span>
+                     </li>
+                     <li data-id="4">
+                      <i></i>
+                      <span>范围4</span>
+                     </li>  
+                  </ul>
+
+                  <ul>
+                     <li data-id="1">
+                      <i></i>
+                      <span>不限</span>
+                     </li>
+                     <li data-id="2000">
+                      <i></i>
+                      <span>2000元以下</span>
+                     </li>
+                     <li data-id="2000-5000">
+                      <i></i>
+                      <span>2000-5000元</span>
+                     </li>
+                     <li data-id="5000-8000">
+                      <i></i>
+                      <span>5000-8000元</span>
+                     </li>
+                     <li data-id="10000-15000">
+                      <i></i>
+                      <span>10000-15000元</span>
+                     </li>
+                     <li data-id="15000-20000">
+                      <i></i>
+                      <span>15000-20000元</span>
+                     </li>
+                     <li data-id="7">
+                      <i></i>
+                      <span>20000元以上</span>
+                     </li>
+                     <li class="noclick">
+                        <span>&nbsp;</span>
+                     </li>
+                     <li class="fillin noclick">
+                        <span class="noborder margins">
+                         <label class="textlabel">
+                          <input type="text"/>
+                         </label>
+                         <em class="hx">-</em>
+                         <label class="textlabel">
+                          <input type="text"/>
+                         </label>
+                         <label class="btnlabel">
+                          <input type="submit" value='提交'/>
+                         </label>
+                        </span>
+                     </li>
+                  </ul>
+
+                  <ul>
+                    <li data-id="1">
+                        <i></i>
+                        <span>100</span>
+                     </li>
+                     <li data-id="2">
+                      <i></i>
+                      <span>1000</span>
+                     </li>
+                     <li data-id="3">
+                      <i></i>
+                      <span>250</span>
+                     </li>
+                     <li data-id="4">
+                      <i></i>
+                      <span>300</span>
+                     </li>
+                  </ul>
+
+                </div>
+                
+
+                <!--<div class="rightContent maincontent">
+                  <ul>
+                     <li class="root">
+                      <i class="iconfont icon-xuanzhong"></i>
+                      <span>默认排序</span>
+                     </li>
+                     <li>
+                      <i></i>
+                      <span>按价格由高到低排序</span>
+                     </li>
+                     <li>
+                      <i></i>
+                      <span>按价格由低到高排序</span>
+                     </li>
+                     <li>
+                      <i></i>
+                      <span>按面积由大到小排序</span>
+                     </li>
+                     <li>
+                      <i></i>
+                      <span>按面积由小到大排序</span>
+                     </li>
+                     <li>
+                      <i></i>
+                      <span>按最新发布排序</span>
+                     </li>
+                  </ul>
+                </div>-->
+             </div>
+         </form>
+     </div>
+
+  </div>
+  <script>
+     window.onload=function(){
+        //var dataArr = {'positionid':2,'positiontext':'东城','positionsubid':2,'positionsubtext':'安贞','shopid':2,'shoptext':'商铺2','scopeid':2,'scopetext':'范围2','rentid':'0-2000','renttext':'2000以下','areaid':2,'areatext':'1000'}
+        //window.filterSearch.filterFun(dataArr);
+     }
+  </script>
+</body>
+</html>

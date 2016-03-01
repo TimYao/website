@@ -1,0 +1,215 @@
+﻿/*reset*/
+body,div,ol,ul,li,h1,h2,h3,h4,h5,h6,p,th,td,dl,dt,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video,button{margin:0;padding:0}
+article,aside,footer,header,hgroup,nav,section,audio,canvas,video,img{display:block}
+body{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+textarea{resize:none}
+iframe,img{border:0;}
+ul,ol{list-style:none}
+input,select,textarea{outline:0;-webkit-user-modify:read-write-plaintext-only}
+input{-webkit-appearance:none}
+a{text-decoration:none}
+/*page*/
+body,html{width:100%;height:100%;position:relative;overflow:hidden;-webkit-backface-visibility:hidden}
+html{font-size: 62.5%;}
+body{font:1.6rem Arial,'Microsoft Yahei';color:#fff;background:#000;min-width:320px;}
+section,article{display:block}
+
+
+/*布局 开始*/
+.global{position:relative;height:100%;width:100%;-webkit-transform-style:preserve-3d;-webkit-backface-visibility:hidden;z-index:0}
+.screen{-webkit-transform-style:preserve-3d}
+.ease{-webkit-transition:all 1.0s ease-in-out}
+.layout{
+  position:relative;
+  overflow:hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -zom-transform-style: preserve-3d;
+}
+.content{position:absolute;}
+/* 布局结束 */
+/*背景 开始*/
+.layer_bg{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 16rem;
+  height:100%;
+  z-index:0
+}
+.animate .layer_bg{
+  -webkit-animation: opa3 1.5s ease-in-out both;
+  -moz-animation: opa3 1.5s ease-in-out both;
+  animation: opa3 1.5s ease-in-out both;
+}
+/*背景 结束*/
+/* 箭头 开始 */
+.swipe_tip{position:absolute;left:50%;width:0.825rem;bottom:1rem;height:1.45rem;z-index:5;margin:0 0 0 -0.4125rem;background:url(../images/swipe_up.png) no-repeat;background-size:0.825rem 1.45rem}
+
+@-webkit-keyframes fadeOutUp{
+  0%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+  50%{opacity:0.3;-webkit-transform:translateY(-0.5rem);transform:translateY(-0.5rem)}
+}
+@keyframes fadeOutUp{
+  0%{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}
+  50%{opacity:0.3;-webkit-transform:translateY(-0.5rem);-ms-transform:translateY(-0.5rem);transform:translateY(-0.5rem)}
+}
+/* 第二屏 开始*/
+.sec02-1{
+  width:10.5rem;
+  height:15.125rem;
+  top:9.5rem;
+  left:50%;
+  margin-left:-5.5rem;
+}
+.sec02-2,.sec02-3{
+  top:1.525rem;
+}
+.sec02-2{
+  width:15.1rem;
+  height:7.5rem;
+  left:50%;
+  margin-left:-7.55rem;
+}
+
+/* 第二屏  结束*/
+
+/* 第三屏  开始*/
+.sec03-1{
+  width:15.4rem;
+  height:6.275rem;
+  left:50%;
+  margin-left:-7.7rem;
+  top:1.25rem;
+}
+.sec03-2{
+  width:21.475rem;
+  height:20.175rem;
+  left:0rem;
+  bottom:0rem;
+  z-index:4;
+}
+.sec03-3{
+  width:12.85rem;
+  height:28.175rem;
+  left:50%;
+  margin-left:-6.425rem;
+  bottom:-10rem;
+  z-index:3;
+}
+/* 第三屏  结束*/
+
+/* 第四屏  开始*/
+#layout_4 .sec04-1{top:0.85rem;left:50%;width:14.925rem; height:6.4rem;margin-left:-7.4625rem;}
+#layout_4 .sec04-2{bottom:0.625rem;left:55%;width:9.475rem;height:17.225rem;margin-left:-4.3rem;}
+/* 第四屏  结束*/
+
+/* 第五屏  开始*/
+#layout_5 .sec05-1{top:0.725rem;left:50%;width:13.175rem;height:8rem;margin-left:-6.5875rem;}
+#layout_5 .sec05-2{left:50%;width:10.8rem;height:14rem;bottom:0rem;margin-left:-5.4rem;}
+#layout_5 .sec05-3{left:50%;width:9.225rem;height:5.475rem;bottom:1rem;margin-left:-4.6125rem;}
+/* 第五屏  结束*/
+
+/* 第六屏  开始*/
+#layout_6 .sec06-1{left:50%;top:0.8rem;width:15.3rem;height:11.05rem;margin-left:-7.625rem;}
+#layout_6 .sec06-2{left:50%;bottom:0rem;width:12.575rem;height:14rem;margin-left:-6.2875rem;}
+/* 第六屏  结束*/
+
+/* 第七屏  开始*/
+#layout_7 .sec07-1{left:50%;top:0.5rem;width:13.775rem;height:8.775rem;margin-left:-6.8875rem;}
+#layout_7 .sec07_buy{bottom:2.0rem;left:50%;width:6.25rem;height:2.3rem;margin-left:-3.025rem;display:block;position:absolute;}
+#layout_7 .sec07_buy img{width:6.85rem;height:2.725rem;display:block;}
+/* 第七屏  结束*/
+
+/*动画设置*/
+.swipe_tip,.fadeOutUp{-webkit-animation:2s fadeOutUp ease-in-out infinite;-moz-animation:2s fadeOutUp ease-in-out infinite}
+
+/*横屏提示*/
+.mask{width:100%;height:100%;background:#32373b;position:absolute;left:0;top:0;z-index:99999;display:none}
+.mask-box{width:100%;height:252px;position:absolute;top:50%;left:0;margin-top:-119px}
+.mask-pic{width:194px;height:194px;margin:0 auto;text-align:center}
+.mask span{font-size:15px;display:block;color:#fff;text-align:center;width:100%;height:25px;padding-top:10px}
+.mask i{width:100px;height:163px;background:url(../images/bg6.png) 0 0 no-repeat;background-size:100px 163px;display:block;margin:0 auto;-webkit-animation:maskAni 1.5s ease infinite alternate;animation:maskAni 1.5s ease infinite alternate}
+@-webkit-keyframes maskAni{
+0% {-webkit-transform:rotate(-90deg)}
+30% {-webkit-transform:rotate(-90deg)}
+70%{-webkit-transform:rotate(0deg)}
+100% {-webkit-transform:rotate(0deg)}
+}
+
+/*兼容横屏*/
+@media all and (orientation : landscape) {
+  .mask{display:block}
+}
+
+/*部分屏幕控制*/
+@media (max-width:320px)
+{
+   .sec02-1{top:11.5rem;}
+}
+@media (width:320px)
+{
+   .sec02-1{top:9.5rem;}
+}
+@media (min-width:384px)
+{
+   .sec02-1{top:11.5rem;}
+}
+@media (min-width:400px)
+{
+   .sec02-1{top:10rem;}
+}
+@media (min-width:424px)
+{
+   .sec02-1{top:11.5rem;}
+}
+/*背景图*/
+.layerone
+{
+   background:url(../images/bkone.jpg) no-repeat top center;
+   background-size:cover;
+   width:100%;
+   height:100%;
+}
+.layertwo
+{
+   background:url(../images/bktwo.jpg) no-repeat top center;
+   background-size:cover;
+   width:100%;
+   height:100%;
+}
+.layerthree
+{
+   background:url(../images/bkthree.jpg) no-repeat top center;
+   background-size:cover;
+   width:100%;
+   height:100%;
+}
+.layerfour
+{
+   background:url(../images/bkfour.jpg) no-repeat top center;
+   background-size:cover;
+   width:100%;
+   height:100%;  
+}
+.layerfive
+{
+   background:url(../images/bkfive.jpg) no-repeat top center;
+   background-size:cover;
+   width:100%;
+   height:100%;  
+}
+.layersix
+{
+   background:url(../images/bksix.jpg) no-repeat top center;
+   background-size:cover;
+   width:100%;
+   height:100%; 
+}
+.layersev
+{
+   background:url(../images/bksev.jpg) no-repeat top center;
+   background-size:cover;
+   width:100%;
+   height:100%; 
+}

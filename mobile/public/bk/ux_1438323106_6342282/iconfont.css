@@ -1,0 +1,54 @@
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot'); /* IE9*/
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff') format('woff'), /* chrome、firefox */
+  url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-logo:before { content: "\e600"; }
+.icon-fanhui:before { content: "\e601"; }
+.icon-sousuo:before { content: "\e602"; }
+.icon-canyin:before { content: "\e603"; }
+.icon-datu:before { content: "\e604"; }
+.icon-ditu:before { content: "\e605"; }
+.icon-ditu1:before { content: "\e606"; }
+.icon-fuzhuang:before { content: "\e607"; }
+.icon-gouwu:before { content: "\e608"; }
+.icon-hufa:before { content: "\e609"; }
+.icon-jiaoyu:before { content: "\e60a"; }
+.icon-jiudian:before { content: "\e60b"; }
+.icon-qialaok:before { content: "\e60c"; }
+.icon-qita:before { content: "\e60d"; }
+.icon-qiche:before { content: "\e60e"; }
+.icon-shenghuo:before { content: "\e60f"; }
+.icon-shouji:before { content: "\e610"; }
+.icon-xiala:before { content: "\e611"; }
+.icon-yiliao:before { content: "\e612"; }
+.icon-zhuangxiu:before { content: "\e613"; }
+.icon-2:before { content: "\e614"; }
+.icon-iconfontditudaohangsolid:before { content: "\e615"; }
+.icon-dituxuanfu:before { content: "\e616"; }
+.icon-junjia:before { content: "\e617"; }
+.icon-liebiaoxuanfu:before { content: "\e618"; }
+.icon-paixuxuanfu:before { content: "\e619"; }
+.icon-shaixuanxuanfu:before { content: "\e61a"; }
+.icon-sousuoxuanfu:before { content: "\e61b"; }
+.icon-iconfontguanbi2:before { content: "\e61c"; }
+.icon-xuanzhong:before { content: "\e61d"; }
+.icon-wifi:before { content: "\e61e"; }
+.icon-dianhua:before { content: "\e61f"; }
+.icon-dianti:before { content: "\e620"; }
+.icon-huoti:before { content: "\e621"; }
+.icon-kongdiao:before { content: "\e622"; }
+.icon-nuanqi:before { content: "\e623"; }
+.icon-tingchechang:before { content: "\e624"; }
